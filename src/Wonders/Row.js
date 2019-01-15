@@ -9,6 +9,9 @@ export default props => (
           name={`${member}.score.${props.field}`}
           component="input"
           type={props.type || "number"}
+          pattern={props.type ? null : "\\d*"}
+          min={props.min}
+          max={props.max}
         />
       </td>
     ))}

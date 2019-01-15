@@ -4,6 +4,7 @@ import { reduxForm, Field, FieldArray } from "redux-form";
 import FinalScore from "./FinalScore";
 import Row from "./Row";
 import Players from "./Players";
+import Science from "./Science";
 
 const renderName = props => (
   <React.Fragment>
@@ -33,7 +34,14 @@ const Wonders = props => (
       <tbody>
         <tr className="red">
           <td>Military</td>
-          <FieldArray name="participants" component={Row} field="military" />
+          <FieldArray
+            name="participants"
+            component={Row}
+            field="military"
+            type="number"
+            min={-6}
+            max={18}
+          />
         </tr>
         <tr>
           <td>Gold</td>
@@ -58,6 +66,10 @@ const Wonders = props => (
         <tr className="green">
           <td>Green</td>
           <FieldArray name="participants" component={Row} field="green" />
+        </tr>
+        <tr className="green">
+          <td />
+          <FieldArray name="participants" component={Science} />
         </tr>
       </tbody>
       <tfoot>
