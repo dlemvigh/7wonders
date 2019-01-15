@@ -1,0 +1,29 @@
+input {
+  width: 3em;
+  background-color: #fff0;
+}
+
+button {
+  margin-top: 2em;
+  padding: 0.5em;
+}
+
+button + button {
+  margin-left: 2em;
+}
+
+.red {
+  background-color: #c005;
+}
+.blue {
+  background-color: #00c5;
+}
+.green {
+    background-color: #0c05;
+}
+.yellow {
+    background-color: #cc05; 
+}
+.purple {
+    background-color: #9095;
+}
